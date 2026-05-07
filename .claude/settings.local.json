@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(git -C /e/portfolio diff bun.lock)",
-      "Bash(npx next build:*)"
+      "Bash(npx next build:*)",
+      "Bash(xxd:*)"
     ]
   }
 }

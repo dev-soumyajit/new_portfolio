@@ -37,23 +37,23 @@ export function Hero() {
       <FloatingIcons />
 
       {/* Aurora blobs */}
-      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <div
-          className="absolute left-[15%] top-[10%] h-[500px] w-[700px] rounded-full blur-[140px]"
+          className="absolute left-[15%] top-[10%] h-[250px] w-[300px] rounded-full blur-[100px] sm:h-[500px] sm:w-[700px] sm:blur-[140px]"
           style={{
             background: "linear-gradient(135deg, rgba(120,80,255,0.15), rgba(56,189,248,0.08))",
             animation: "aurora-1 8s ease-in-out infinite",
           }}
         />
         <div
-          className="absolute right-[10%] top-[30%] h-[400px] w-[500px] rounded-full blur-[120px]"
+          className="absolute right-[10%] top-[30%] h-[200px] w-[250px] rounded-full blur-[80px] sm:h-[400px] sm:w-[500px] sm:blur-[120px]"
           style={{
             background: "linear-gradient(135deg, rgba(236,72,153,0.1), rgba(120,80,255,0.08))",
             animation: "aurora-2 10s ease-in-out infinite",
           }}
         />
         <div
-          className="absolute left-[40%] bottom-[10%] h-[350px] w-[450px] rounded-full blur-[100px]"
+          className="absolute left-[40%] bottom-[10%] h-[180px] w-[220px] rounded-full blur-[80px] sm:h-[350px] sm:w-[450px] sm:blur-[100px]"
           style={{
             background: "linear-gradient(135deg, rgba(56,189,248,0.1), rgba(52,211,153,0.06))",
             animation: "aurora-3 12s ease-in-out infinite",
@@ -86,7 +86,7 @@ export function Hero() {
             Hello World, I&apos;m
           </motion.p>
 
-          <h1 className="overflow-hidden text-[2.5rem] font-bold leading-[1.1] tracking-tight sm:text-6xl md:text-8xl lg:text-9xl">
+          <h1 className="overflow-hidden whitespace-nowrap text-[2rem] font-bold leading-[1.1] tracking-tight min-[375px]:text-[2.5rem] sm:text-6xl md:text-8xl lg:text-9xl">
             {nameChars.map((char, i) => (
               <motion.span
                 key={i}

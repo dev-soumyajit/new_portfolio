@@ -37,7 +37,7 @@ export function GlowCursor() {
 
   return (
     <motion.div
-      className="pointer-events-none fixed z-[99] -translate-x-1/2 -translate-y-1/2 rounded-full"
+      className="pointer-events-none fixed z-[99] -translate-x-1/2 -translate-y-1/2 rounded-full will-change-transform"
       style={{
         left: cursorX,
         top: cursorY,

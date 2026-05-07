@@ -49,6 +49,18 @@ export function Navbar() {
     return () => observer.disconnect();
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
   const scrollTo = (href: string) => {
     setMobileOpen(false);
     const el = document.querySelector(href);
@@ -59,13 +71,13 @@ export function Navbar() {
     <>
       {/* ── Floating pill navbar (appears after scroll) ── */}
       <AnimatePresence>
-        {scrolled && (
+        {scrolled && !mobileOpen && (
           <motion.div
             initial={{ y: -80, opacity: 0, scale: 0.95 }}
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: -80, opacity: 0, scale: 0.95 }}
             transition={{ type: "spring", stiffness: 260, damping: 24 }}
-            className="fixed top-4 left-1/2 z-50 -translate-x-1/2 w-[calc(100%-2rem)] max-w-fit sm:w-auto"
+            className="fixed top-4 left-1/2 z-50 -translate-x-1/2 w-auto max-w-[calc(100vw-2rem)]"
           >
             {/* Desktop pill */}
             <div className="hidden md:flex items-center gap-1 rounded-full border border-white/[0.08] bg-[oklch(0.09_0.01_260/75%)] px-1.5 py-1.5 shadow-xl shadow-black/20 backdrop-blur-xl">
@@ -114,21 +126,21 @@ export function Navbar() {
             <div className="flex md:hidden items-center justify-between rounded-full border border-white/[0.08] bg-[oklch(0.09_0.01_260/75%)] px-2 py-1.5 shadow-xl shadow-black/20 backdrop-blur-xl">
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10"
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10"
               >
                 <Terminal className="h-3.5 w-3.5 text-primary" />
               </button>
 
-              <span className="text-[13px] font-semibold gradient-text">
+              <span className="mx-3 truncate text-[13px] font-semibold gradient-text">
                 {personalInfo.name.split(" ")[0]}
               </span>
 
               <button
-                onClick={() => setMobileOpen(!mobileOpen)}
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-white/[0.06]"
-                aria-label="Toggle menu"
+                onClick={() => setMobileOpen(true)}
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/[0.06]"
+                aria-label="Open menu"
               >
-                {mobileOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+                <Menu className="h-4 w-4" />
               </button>
             </div>
           </motion.div>
@@ -175,7 +187,7 @@ export function Navbar() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="relative z-50 rounded-full p-2.5 text-foreground md:hidden"
+            className="relative z-[60] rounded-full p-2.5 text-foreground md:hidden"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -190,9 +202,19 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 md:hidden"
+            className="fixed inset-0 z-50 md:hidden"
           >
             <div className="absolute inset-0 bg-[oklch(0.07_0.01_260/95%)] backdrop-blur-xl" />
+
+            {/* Close button at top-right */}
+            <button
+              onClick={() => setMobileOpen(false)}
+              className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.06] text-foreground"
+              aria-label="Close menu"
+            >
+              <X className="h-5 w-5" />
+            </button>
+
             <div className="relative flex h-full flex-col items-center justify-center gap-7">
               {navItems.map(({ label, href }, i) => (
                 <motion.button

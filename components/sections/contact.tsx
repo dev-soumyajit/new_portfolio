@@ -77,7 +77,7 @@ export function Contact() {
 
         <BeamDivider />
 
-        <div className="mt-12 grid gap-12 lg:grid-cols-5">
+        <div className="mt-8 grid gap-8 sm:mt-12 lg:grid-cols-5 lg:gap-12">
           <SectionReveal direction="left" className="lg:col-span-2">
             <div className="space-y-8">
               <div>

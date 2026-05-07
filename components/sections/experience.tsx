@@ -38,7 +38,7 @@ export function Experience() {
 
         <div className="relative mt-12">
           {/* Glowing timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-px md:left-12">
+          <div className="absolute left-5 top-0 bottom-0 w-px sm:left-8 md:left-12">
             <div className="h-full w-full bg-gradient-to-b from-primary/50 via-primary/20 to-transparent" />
             <motion.div
               className="absolute top-0 left-0 w-full bg-gradient-to-b from-primary to-transparent"
@@ -52,9 +52,9 @@ export function Experience() {
 
           {experiences.map((exp, index) => (
             <SectionReveal key={exp.company} delay={index * 0.15}>
-              <div className="relative mb-12 pl-20 md:pl-28">
+              <div className="relative mb-12 pl-14 sm:pl-20 md:pl-28">
                 {/* Timeline node */}
-                <div className="absolute left-[26px] top-0 z-10 md:left-[42px]">
+                <div className="absolute left-[12px] top-0 z-10 sm:left-[26px] md:left-[42px]">
                   <motion.div
                     initial={{ scale: 0, rotate: -180 }}
                     whileInView={{ scale: 1, rotate: 0 }}

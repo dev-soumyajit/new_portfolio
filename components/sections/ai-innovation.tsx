@@ -55,7 +55,7 @@ export function AiInnovation() {
         <div className="mt-8 grid items-center gap-8 sm:mt-12 sm:gap-12 lg:grid-cols-2">
           {/* Orbit visualization */}
           <SectionReveal direction="left">
-            <div className="relative mx-auto flex h-[280px] w-[280px] scale-[0.8] items-center justify-center sm:h-[340px] sm:w-[340px] sm:scale-100">
+            <div className="relative mx-auto flex h-[280px] w-[280px] items-center justify-center overflow-hidden rounded-full sm:h-[340px] sm:w-[340px]">
               {/* Orbit rings */}
               {[130, 90, 50].map((r) => (
                 <div

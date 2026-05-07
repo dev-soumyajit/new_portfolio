@@ -123,11 +123,16 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
   }
   html {
-    @apply font-sans scroll-smooth;
-    font-size: 18px;
+    @apply font-sans scroll-smooth overflow-x-hidden;
+    font-size: 16px;
+  }
+  @media (min-width: 640px) {
+    html {
+      font-size: 18px;
+    }
   }
 }
 

@@ -85,7 +85,7 @@ function ProjectModal({
             <h4 className="text-xs font-semibold uppercase tracking-[0.15em] text-foreground/50">
               Features
             </h4>
-            <ul className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1.5">
+            <ul className="mt-2 grid gap-x-3 gap-y-1.5 min-[400px]:grid-cols-2">
               {project.features.map((f) => (
                 <li key={f} className="flex items-center gap-1.5 text-sm text-muted-foreground">
                   <ChevronRight className="h-2.5 w-2.5 text-primary/70" />

@@ -14,6 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.devsoumyajit.in"),
+  alternates: {
+    canonical: "/",
+  },
   title: "Soumyajit Khan — Full Stack Developer & AI Engineer",
   description:
     "Results-driven Full Stack Developer building scalable AI-powered web applications, REST APIs, and backend systems. Skilled in Next.js, React, Node.js, LangChain, Docker, and modern DevOps workflows.",
@@ -39,6 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
+    url: "https://www.devsoumyajit.in",
     title: "Soumyajit Khan — Full Stack Developer & AI Engineer",
     description:
       "Building scalable AI-powered web applications and backend systems.",
