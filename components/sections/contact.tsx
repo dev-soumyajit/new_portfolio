@@ -13,13 +13,36 @@ import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/ui/social-ic
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [focused, setFocused] = useState<string | null>(null);
+  const [isSending, setIsSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-    setFormData({ name: "", email: "", message: "" });
+    setIsSending(true);
+    setError(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Unable to send message.");
+      }
+
+      setSubmitted(true);
+      setFormData({ name: "", email: "", message: "" });
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Unexpected error occurred.");
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -187,17 +210,27 @@ export function Contact() {
                   />
                 </div>
 
+                {error ? (
+                  <p className="text-sm text-red-400">{error}</p>
+                ) : null}
+
                 <MagneticButton className="w-full">
                   <motion.button
                     type="submit"
                     whileHover={{ scale: 1.01 }}
                     whileTap={{ scale: 0.99 }}
-                    className="group relative w-full overflow-hidden rounded-xl py-3.5 text-sm font-medium transition-all"
+                    disabled={isSending}
+                    className="group relative w-full overflow-hidden rounded-xl py-3.5 text-sm font-medium transition-all disabled:cursor-not-allowed disabled:opacity-70"
                   >
                     <span className="absolute inset-0 bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600" />
                     <span className="absolute inset-0 bg-gradient-to-r from-violet-600 via-cyan-500 to-purple-600 opacity-0 transition-opacity group-hover:opacity-100" />
                     <span className="relative flex items-center justify-center gap-2 text-white">
-                      {submitted ? (
+                      {isSending ? (
+                        <>
+                          <Send className="h-4 w-4 animate-spin" />
+                          Sending...
+                        </>
+                      ) : submitted ? (
                         <>
                           <CheckCircle className="h-4 w-4" />
                           Message Sent!

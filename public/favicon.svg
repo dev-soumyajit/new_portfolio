@@ -1,0 +1,43 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#67e8f9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer circle background -->
+  <circle cx="128" cy="128" r="128" fill="url(#grad1)" opacity="0.95"/>
+  
+  <!-- Inner rounded square background -->
+  <rect x="32" y="32" width="192" height="192" rx="48" fill="#0f172a" opacity="0.8"/>
+  
+  <!-- Left bracket (code symbol) -->
+  <g stroke="url(#grad2)" stroke-width="8" stroke-linecap="round" fill="none">
+    <path d="M 70 90 L 50 128 L 70 166"/>
+    <path d="M 186 90 L 206 128 L 186 166"/>
+  </g>
+  
+  <!-- Center AI nodes -->
+  <circle cx="128" cy="100" r="6" fill="url(#grad2)"/>
+  <circle cx="108" cy="128" r="6" fill="url(#grad2)"/>
+  <circle cx="148" cy="128" r="6" fill="url(#grad2)"/>
+  <circle cx="128" cy="156" r="6" fill="url(#grad2)"/>
+  
+  <!-- Connecting lines (neural network style) -->
+  <g stroke="url(#grad2)" stroke-width="2" opacity="0.6">
+    <line x1="128" y1="100" x2="108" y2="128"/>
+    <line x1="128" y1="100" x2="148" y2="128"/>
+    <line x1="108" y1="128" x2="128" y2="156"/>
+    <line x1="148" y1="128" x2="128" y2="156"/>
+  </g>
+  
+  <!-- Center bright node -->
+  <circle cx="128" cy="128" r="8" fill="url(#grad2)"/>
+  <circle cx="128" cy="128" r="12" fill="none" stroke="url(#grad2)" stroke-width="1" opacity="0.5"/>
+</svg>

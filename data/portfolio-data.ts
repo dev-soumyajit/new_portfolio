@@ -16,12 +16,12 @@ export const personalInfo = {
   name: "Soumyajit Khan",
   role: "Full Stack Developer | AI Engineer",
   location: "Kolkata, India",
-  email: "tele2.skcinfotech@gmail.com",
+  email: "reach@devsoumyajit.in",
   tagline: "Building scalable AI-powered web applications and backend systems.",
   about:
     "Results-driven Full Stack Developer with production experience building scalable web applications, REST APIs, AI-powered systems, and backend architectures. Skilled in Next.js, React, Node.js, MongoDB, LangChain, RAG pipelines, Docker, CI/CD, and modern DevOps workflows. Passionate about applied AI systems, performance optimization, and real-world product engineering.",
   social: {
-    github: "https://github.com/soumyajitkhan",
+    github: "https://github.com/dev-soumyajit",
     linkedin: "https://linkedin.com/in/soumyajitkhan",
     twitter: "https://twitter.com/soumyajitkhan",
   },
@@ -191,8 +191,8 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     company: "Azmth Labs Private Limited",
-    role: "Full Stack Developer & DevOps Engineer",
-    period: "2024 — Present",
+    role: "Founding Full Stack Developer & DevOps Engineer",
+    period: "2025 — Present",
     location: "India",
     highlights: [
       "Built scalable production applications serving real users with high availability",
@@ -254,8 +254,8 @@ export const aiCapabilities: AiCapability[] = [
 export const stats = [
   { label: "Projects Built", value: "15+" },
   { label: "AI Systems", value: "5+" },
-  { label: "APIs Designed", value: "20+" },
-  { label: "Lines of Code", value: "50K+" },
+  { label: "APIs Designed", value: "50+" },
+  { label: "Lines of Code", value: "100K+" },
 ];
 
 export const navItems = [

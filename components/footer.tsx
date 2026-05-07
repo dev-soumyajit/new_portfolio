@@ -74,7 +74,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} {personalInfo.name}
           </p>
           <p className="flex items-center gap-1 text-xs text-muted-foreground/40">
-            Crafted with <Heart className="h-3 w-3 text-red-500/60" /> Next.js & TypeScript
+            Crafted with <Heart className="h-3 w-3 text-red-500/60" /> by Soumyajit
           </p>
         </div>
       </div>

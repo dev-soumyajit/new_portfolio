@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "Soumyajit Khan — Full Stack Developer & AI Engineer",
   description:
     "Results-driven Full Stack Developer building scalable AI-powered web applications, REST APIs, and backend systems. Skilled in Next.js, React, Node.js, LangChain, Docker, and modern DevOps workflows.",
+  icons: {
+    icon: "/favicon.svg",
+  },
   keywords: [
     "Soumyajit Khan",
     "Full Stack Developer",
