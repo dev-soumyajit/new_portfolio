@@ -22,10 +22,10 @@ export const personalInfo = {
     "Results-driven Full Stack Developer with production experience building scalable web applications, REST APIs, AI-powered systems, and backend architectures. Skilled in Next.js, React, Node.js, MongoDB, LangChain, RAG pipelines, Docker, CI/CD, and modern DevOps workflows. Passionate about applied AI systems, performance optimization, and real-world product engineering.",
   social: {
     github: "https://github.com/dev-soumyajit",
-    linkedin: "https://linkedin.com/in/soumyajitkhan",
-    twitter: "https://twitter.com/soumyajitkhan",
+    linkedin: "https://www.linkedin.com/in/soumyajit-khan-48517a22a/",
+    twitter: "#",
   },
-  resumeUrl: "#",
+  resumeUrl: "https://drive.google.com/file/d/1kDeFLzwrVcSMDQuMGSiLEg29ztJao5dR/view?usp=drive_link",
 };
 
 export interface Skill {

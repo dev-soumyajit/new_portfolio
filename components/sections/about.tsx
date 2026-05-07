@@ -87,6 +87,8 @@ export function About() {
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a
                     href={personalInfo.resumeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-5 py-2 text-sm text-muted-foreground transition-all hover:border-primary/30 hover:text-foreground"
                   >
                     <Download className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5" />

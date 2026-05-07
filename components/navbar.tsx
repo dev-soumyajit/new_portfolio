@@ -18,15 +18,27 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
+    const sectionIds = navItems.map(({ href }) => href.replace("#", ""));
+    const visibleSections = new Set<string>();
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          const id = entry.target.id;
           if (entry.isIntersecting) {
-            setActiveSection(`#${entry.target.id}`);
+            visibleSections.add(id);
+          } else {
+            visibleSections.delete(id);
           }
         });
+
+        // Pick the first visible section in DOM order
+        const current = sectionIds.find((id) => visibleSections.has(id));
+        if (current) {
+          setActiveSection(`#${current}`);
+        }
       },
-      { threshold: 0.3, rootMargin: "-80px 0px -50% 0px" }
+      { threshold: 0.2, rootMargin: "-80px 0px -40% 0px" }
     );
 
     navItems.forEach(({ href }) => {
@@ -70,7 +82,7 @@ export function Navbar() {
                 <MagneticButton key={href} strength={0.08}>
                   <button
                     onClick={() => scrollTo(href)}
-                    className={`relative rounded-full px-3.5 py-1.5 text-[13px] font-medium transition-colors ${
+                    className={`relative rounded-full px-4 py-2 text-base font-medium transition-colors ${
                       activeSection === href
                         ? "text-foreground"
                         : "text-muted-foreground/60 hover:text-foreground/90"
@@ -91,7 +103,7 @@ export function Navbar() {
               <MagneticButton strength={0.08}>
                 <button
                   onClick={() => scrollTo("#contact")}
-                  className="ml-1 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-4 py-1.5 text-[13px] font-medium text-white transition-opacity hover:opacity-90"
+                  className="ml-1 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-5 py-2 text-base font-medium text-white transition-opacity hover:opacity-90"
                 >
                   Hire Me
                 </button>
@@ -148,14 +160,14 @@ export function Navbar() {
               <button
                 key={href}
                 onClick={() => scrollTo(href)}
-                className="px-3 py-1.5 text-sm text-muted-foreground/60 transition-colors hover:text-foreground/90"
+                className="px-4 py-2 text-base text-muted-foreground/60 transition-colors hover:text-foreground/90"
               >
                 {label}
               </button>
             ))}
             <button
               onClick={() => scrollTo("#contact")}
-              className="ml-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-5 py-1.5 text-sm font-medium text-foreground/80 transition-all hover:border-white/[0.15] hover:bg-white/[0.06]"
+              className="ml-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-6 py-2 text-base font-medium text-foreground/80 transition-all hover:border-white/[0.15] hover:bg-white/[0.06]"
             >
               Hire Me
             </button>

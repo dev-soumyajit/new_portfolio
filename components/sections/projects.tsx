@@ -73,21 +73,21 @@ function ProjectModal({
               <Icon className="h-4.5 w-4.5 text-white" />
             </div>
             <div>
-              <h3 className="text-lg font-bold leading-tight">{project.title}</h3>
-              <p className="text-xs text-muted-foreground/70">{project.subtitle}</p>
+              <h3 className="text-xl font-bold leading-tight">{project.title}</h3>
+              <p className="text-sm text-muted-foreground/70">{project.subtitle}</p>
             </div>
           </div>
 
-          <p className="mt-4 text-[13px] text-muted-foreground leading-relaxed">{project.description}</p>
+          <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{project.description}</p>
 
           {/* Features */}
           <div className="mt-4">
-            <h4 className="text-[10px] font-semibold uppercase tracking-[0.15em] text-foreground/50">
+            <h4 className="text-xs font-semibold uppercase tracking-[0.15em] text-foreground/50">
               Features
             </h4>
             <ul className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1.5">
               {project.features.map((f) => (
-                <li key={f} className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                <li key={f} className="flex items-center gap-1.5 text-sm text-muted-foreground">
                   <ChevronRight className="h-2.5 w-2.5 text-primary/70" />
                   {f}
                 </li>
@@ -100,7 +100,7 @@ function ProjectModal({
             {project.tech.map((t) => (
               <span
                 key={t}
-                className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2 py-0.5 text-[10px] text-muted-foreground/70"
+                className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2.5 py-0.5 text-xs text-muted-foreground/70"
               >
                 {t}
               </span>
@@ -114,7 +114,7 @@ function ProjectModal({
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 py-2 text-xs font-medium text-white transition-opacity hover:opacity-90"
+                className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
               >
                 <ExternalLink className="h-3 w-3" /> Live Demo
               </a>
@@ -124,7 +124,7 @@ function ProjectModal({
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-white/[0.08] bg-white/[0.03] py-2 text-xs font-medium transition-all hover:bg-white/[0.06]"
+                className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-white/[0.08] bg-white/[0.03] py-2 text-sm font-medium transition-all hover:bg-white/[0.06]"
               >
                 <GithubIcon className="h-3 w-3" /> Source
               </a>

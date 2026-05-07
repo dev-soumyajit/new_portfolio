@@ -73,7 +73,7 @@ export function Footer() {
           <p className="text-xs text-muted-foreground/40">
             &copy; {new Date().getFullYear()} {personalInfo.name}
           </p>
-          <p className="flex items-center gap-1 text-xs text-muted-foreground/40">
+          <p className="flex items-center gap-1 text-sm text-muted-foreground/40">
             Crafted with <Heart className="h-3 w-3 text-red-500/60" /> by Soumyajit
           </p>
         </div>
