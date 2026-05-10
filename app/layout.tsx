@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Soumyajit Khan — Full Stack Developer & AI Engineer",
     description:
       "Building scalable AI-powered web applications and backend systems.",
-    siteName: "Soumyajit Khan Portfolio",
+    siteName: "Soumyajit Khan",
   },
   twitter: {
     card: "summary_large_image",
@@ -68,6 +68,14 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Soumyajit Khan",
+  alternateName: "Soumyajit Khan Portfolio",
+  url: "https://www.devsoumyajit.in",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -78,6 +86,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <TooltipProvider>{children}</TooltipProvider>
       </body>
