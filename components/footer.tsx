@@ -13,7 +13,7 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer className="relative border-t border-white/[0.04]">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-violet-600/[0.02] to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-amber-600/[0.02] to-transparent" />
       <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="grid gap-8 sm:gap-12 md:grid-cols-3">
           {/* Brand */}

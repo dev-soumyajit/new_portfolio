@@ -12,7 +12,7 @@ export function Experience() {
   return (
     <section id="experience" className="relative py-20 px-4 sm:py-32 sm:px-6">
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div className="absolute right-0 top-1/2 h-[400px] w-[400px] rounded-full bg-indigo-600/[0.04] blur-[120px]" />
+        <div className="absolute right-0 top-1/2 h-[400px] w-[400px] rounded-full bg-orange-600/[0.04] blur-[120px]" />
       </div>
 
       <div className="relative mx-auto max-w-4xl">
@@ -22,7 +22,7 @@ export function Experience() {
               initial={{ width: 0 }}
               whileInView={{ width: "3rem" }}
               viewport={{ once: true }}
-              className="mx-auto mb-6 block h-px bg-gradient-to-r from-primary/80 to-indigo-400/80"
+              className="mx-auto mb-6 block h-px bg-gradient-to-r from-primary/80 to-yellow-500/80"
             />
             <span className="text-sm font-medium uppercase tracking-[0.25em] text-primary/80">
               Experience

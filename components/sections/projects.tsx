@@ -49,7 +49,7 @@ function ProjectModal({
         exit={{ scale: 0.95, opacity: 0, y: 12 }}
         transition={{ type: "spring", stiffness: 350, damping: 28 }}
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-md max-h-[90vh] overflow-y-auto rounded-2xl border border-white/[0.08] bg-[oklch(0.09_0.01_260)] shadow-2xl"
+        className="relative w-full max-w-md max-h-[90vh] overflow-y-auto rounded-2xl border border-white/[0.08] bg-[oklch(0.14_0.006_60)] shadow-2xl"
       >
         {/* Compact gradient header */}
         <div className={`relative h-24 bg-gradient-to-br ${project.gradient} overflow-hidden`}>
@@ -57,7 +57,7 @@ function ProjectModal({
           <div className="absolute inset-0 flex items-center justify-center">
             <Icon className="h-16 w-16 text-white/10" />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.09_0.01_260)] via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.14_0.006_60)] via-transparent to-transparent" />
           <button
             onClick={onClose}
             className="absolute right-3 top-3 rounded-full bg-black/30 p-1.5 text-white/80 backdrop-blur-sm transition-colors hover:bg-black/50 hover:text-white"
@@ -114,7 +114,7 @@ function ProjectModal({
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
+                className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-amber-600/90 to-amber-500/90 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
               >
                 <ExternalLink className="h-3 w-3" /> Live Demo
               </a>
@@ -142,8 +142,8 @@ export function Projects() {
   return (
     <section id="projects" className="relative py-20 px-4 sm:py-32 sm:px-6">
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div className="absolute left-1/4 top-0 h-[500px] w-[500px] rounded-full bg-violet-600/[0.04] blur-[120px]" />
-        <div className="absolute right-0 bottom-1/4 h-[400px] w-[400px] rounded-full bg-cyan-600/[0.03] blur-[100px]" />
+        <div className="absolute left-1/4 top-0 h-[500px] w-[500px] rounded-full bg-amber-600/[0.04] blur-[120px]" />
+        <div className="absolute right-0 bottom-1/4 h-[400px] w-[400px] rounded-full bg-orange-600/[0.03] blur-[100px]" />
       </div>
 
       <div className="relative mx-auto max-w-6xl">
@@ -153,7 +153,7 @@ export function Projects() {
               initial={{ width: 0 }}
               whileInView={{ width: "3rem" }}
               viewport={{ once: true }}
-              className="mx-auto mb-6 block h-px bg-gradient-to-r from-primary/80 to-cyan-400/80"
+              className="mx-auto mb-6 block h-px bg-gradient-to-r from-primary/80 to-yellow-500/80"
             />
             <span className="text-sm font-medium uppercase tracking-[0.25em] text-primary/80">
               Projects
@@ -192,7 +192,7 @@ export function Projects() {
                             <Icon className="h-20 w-20 text-white/15" />
                           </motion.div>
                         </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.08_0.01_260)] via-transparent to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.14_0.006_60)] via-transparent to-transparent" />
 
                         {/* Floating badge */}
                         {project.liveUrl && (

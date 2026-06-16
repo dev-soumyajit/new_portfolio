@@ -44,7 +44,7 @@ export const skillCategories: SkillCategory[] = [
   {
     title: "Frontend",
     icon: Globe,
-    color: "from-violet-500 to-purple-600",
+    color: "from-amber-400/80 to-amber-600/80",
     skills: [
       { name: "React.js", icon: Code2 },
       { name: "Next.js", icon: Globe },
@@ -57,7 +57,7 @@ export const skillCategories: SkillCategory[] = [
   {
     title: "Backend",
     icon: Server,
-    color: "from-cyan-500 to-blue-600",
+    color: "from-yellow-500/80 to-amber-600/80",
     skills: [
       { name: "Node.js", icon: Server },
       { name: "Express.js", icon: Server },
@@ -70,7 +70,7 @@ export const skillCategories: SkillCategory[] = [
   {
     title: "AI / LLM",
     icon: Brain,
-    color: "from-emerald-500 to-teal-600",
+    color: "from-orange-400/80 to-amber-600/80",
     skills: [
       { name: "LangChain", icon: Brain },
       { name: "RAG Pipelines", icon: Database },
@@ -82,7 +82,7 @@ export const skillCategories: SkillCategory[] = [
   {
     title: "Databases",
     icon: Database,
-    color: "from-orange-500 to-amber-600",
+    color: "from-amber-500/80 to-yellow-600/80",
     skills: [
       { name: "MongoDB", icon: Database },
       { name: "SQL", icon: Database },
@@ -91,7 +91,7 @@ export const skillCategories: SkillCategory[] = [
   {
     title: "DevOps & Cloud",
     icon: Cloud,
-    color: "from-rose-500 to-pink-600",
+    color: "from-orange-400/80 to-red-500/70",
     skills: [
       { name: "Docker", icon: Box },
       { name: "AWS", icon: Cloud },
@@ -102,7 +102,7 @@ export const skillCategories: SkillCategory[] = [
   {
     title: "Languages",
     icon: Code2,
-    color: "from-indigo-500 to-violet-600",
+    color: "from-yellow-400/80 to-amber-500/80",
     skills: [
       { name: "JavaScript", icon: Code2 },
       { name: "Python", icon: Code2 },
@@ -139,7 +139,7 @@ export const projects: Project[] = [
       "Async backend pipelines",
     ],
     tech: ["Python", "FastAPI", "LangChain", "OpenAI API", "RAG", "Vector DB"],
-    gradient: "from-violet-600 to-indigo-600",
+    gradient: "from-amber-500/85 to-amber-600/85",
     icon: "brain",
   },
   {
@@ -157,7 +157,7 @@ export const projects: Project[] = [
     ],
     tech: ["Next.js 14", "TypeScript", "Stream.io", "Clerk", "Tailwind CSS"],
     liveUrl: "https://yoom.soumyajit.site",
-    gradient: "from-cyan-600 to-blue-600",
+    gradient: "from-yellow-500/85 to-amber-600/85",
     icon: "video",
   },
   {
@@ -174,7 +174,7 @@ export const projects: Project[] = [
       "Real-time processing",
     ],
     tech: ["Node.js", "MongoDB", "AI APIs", "Docker"],
-    gradient: "from-emerald-600 to-teal-600",
+    gradient: "from-orange-500/85 to-amber-600/85",
     icon: "phone",
   },
 ];
@@ -226,28 +226,28 @@ export const aiCapabilities: AiCapability[] = [
     description:
       "Building production-grade systems with large language models, prompt engineering, and fine-tuned pipelines for real-world applications.",
     icon: "brain",
-    gradient: "from-violet-500/20 to-purple-500/20",
+    gradient: "from-amber-400/15 to-amber-500/15",
   },
   {
     title: "RAG Pipelines",
     description:
       "Designing retrieval-augmented generation systems with vector databases, semantic search, and context-aware AI responses.",
     icon: "database",
-    gradient: "from-cyan-500/20 to-blue-500/20",
+    gradient: "from-yellow-400/15 to-amber-400/15",
   },
   {
     title: "AI Automation",
     description:
       "Creating intelligent automation workflows that combine AI reasoning with real-world actions for business process optimization.",
     icon: "zap",
-    gradient: "from-emerald-500/20 to-teal-500/20",
+    gradient: "from-orange-400/15 to-amber-500/15",
   },
   {
     title: "Applied AI Systems",
     description:
       "End-to-end AI system architecture from data pipelines to inference APIs, designed for scalability and production reliability.",
     icon: "cpu",
-    gradient: "from-orange-500/20 to-amber-500/20",
+    gradient: "from-orange-400/15 to-yellow-400/15",
   },
 ];
 

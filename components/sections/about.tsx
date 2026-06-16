@@ -13,25 +13,25 @@ const highlights = [
     icon: Code2,
     title: "Full Stack",
     description: "End-to-end development from pixel-perfect UIs to scalable backend architectures.",
-    gradient: "from-violet-500/20 to-purple-500/20",
+    gradient: "from-amber-400/15 to-amber-500/15",
   },
   {
     icon: Cpu,
     title: "AI Engineering",
     description: "Production LLM systems, RAG pipelines, and intelligent automation workflows.",
-    gradient: "from-cyan-500/20 to-blue-500/20",
+    gradient: "from-yellow-400/15 to-amber-400/15",
   },
   {
     icon: Briefcase,
     title: "DevOps",
     description: "Docker, CI/CD pipelines, AWS deployments, and infrastructure automation.",
-    gradient: "from-emerald-500/20 to-teal-500/20",
+    gradient: "from-orange-400/15 to-amber-500/15",
   },
   {
     icon: Rocket,
     title: "Product Builder",
     description: "Shipping real products that users love — from idea to production deployment.",
-    gradient: "from-orange-500/20 to-amber-500/20",
+    gradient: "from-orange-400/15 to-yellow-400/15",
   },
 ];
 
@@ -44,7 +44,7 @@ export function About() {
   return (
     <section id="about" className="relative py-20 px-4 sm:py-32 sm:px-6">
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div className="absolute right-0 top-1/4 h-[400px] w-[400px] rounded-full bg-violet-600/[0.04] blur-[120px]" />
+        <div className="absolute right-0 top-1/4 h-[400px] w-[400px] rounded-full bg-amber-600/[0.04] blur-[120px]" />
       </div>
 
       <div className="relative mx-auto max-w-6xl">
@@ -54,7 +54,7 @@ export function About() {
               initial={{ width: 0 }}
               whileInView={{ width: "3rem" }}
               viewport={{ once: true }}
-              className="mx-auto mb-6 block h-px bg-gradient-to-r from-primary/80 to-cyan-400/80"
+              className="mx-auto mb-6 block h-px bg-gradient-to-r from-primary/80 to-yellow-500/80"
             />
             <span className="text-sm font-medium uppercase tracking-[0.25em] text-primary/80">
               About Me
@@ -108,8 +108,8 @@ export function About() {
                   className="flex h-full flex-col items-center justify-center p-6 text-center"
                   spotlightColor={
                     i % 2 === 0
-                      ? "rgba(120,80,255,0.1)"
-                      : "rgba(56,189,248,0.1)"
+                      ? "rgba(200,165,80,0.07)"
+                      : "rgba(190,155,90,0.07)"
                   }
                 >
                   <p className="text-3xl font-bold gradient-text md:text-4xl">

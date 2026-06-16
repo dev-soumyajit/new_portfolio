@@ -41,21 +41,21 @@ export function Hero() {
         <div
           className="absolute left-[15%] top-[10%] h-[250px] w-[300px] rounded-full blur-[100px] sm:h-[500px] sm:w-[700px] sm:blur-[140px]"
           style={{
-            background: "linear-gradient(135deg, rgba(120,80,255,0.15), rgba(56,189,248,0.08))",
+            background: "linear-gradient(135deg, rgba(200,165,80,0.15), rgba(190,155,90,0.08))",
             animation: "aurora-1 8s ease-in-out infinite",
           }}
         />
         <div
           className="absolute right-[10%] top-[30%] h-[200px] w-[250px] rounded-full blur-[80px] sm:h-[400px] sm:w-[500px] sm:blur-[120px]"
           style={{
-            background: "linear-gradient(135deg, rgba(236,72,153,0.1), rgba(120,80,255,0.08))",
+            background: "linear-gradient(135deg, rgba(180,130,100,0.1), rgba(200,165,80,0.08))",
             animation: "aurora-2 10s ease-in-out infinite",
           }}
         />
         <div
           className="absolute left-[40%] bottom-[10%] h-[180px] w-[220px] rounded-full blur-[80px] sm:h-[350px] sm:w-[450px] sm:blur-[100px]"
           style={{
-            background: "linear-gradient(135deg, rgba(56,189,248,0.1), rgba(52,211,153,0.06))",
+            background: "linear-gradient(135deg, rgba(190,155,90,0.1), rgba(200,165,80,0.06))",
             animation: "aurora-3 12s ease-in-out infinite",
           }}
         />
@@ -68,7 +68,7 @@ export function Hero() {
       <div
         className="pointer-events-none absolute inset-0"
         style={{
-          background: "radial-gradient(ellipse 80% 60% at 50% 50%, transparent 30%, oklch(0.07 0.01 260) 100%)",
+          background: "radial-gradient(ellipse 80% 60% at 50% 50%, transparent 30%, oklch(0.13 0.004 60) 100%)",
         }}
         aria-hidden="true"
       />
@@ -97,7 +97,7 @@ export function Hero() {
                 className="inline-block gradient-text"
                 style={{ transformOrigin: "bottom" }}
               >
-                {char === " " ? " " : char}
+                {char === " " ? "\u00A0" : char}
               </motion.span>
             ))}
           </h1>
@@ -157,9 +157,9 @@ export function Hero() {
               href="#projects"
               className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full px-8 py-3.5 text-sm font-medium transition-all"
             >
-              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600" />
-              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-violet-600 via-cyan-500 to-purple-600 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              <span className="absolute inset-px rounded-full bg-[oklch(0.07_0.01_260)] opacity-0 transition-opacity group-hover:opacity-0" />
+              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-600/90 via-amber-500/90 to-orange-500/90" />
+              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-500/90 via-yellow-500/80 to-amber-500/90 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <span className="absolute inset-px rounded-full bg-[oklch(0.13_0.004_60)] opacity-0 transition-opacity group-hover:opacity-0" />
               <span className="relative text-white">View My Work</span>
             </a>
           </MagneticButton>
@@ -194,7 +194,7 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="group rounded-full border border-white/[0.06] bg-white/[0.02] p-3 text-muted-foreground/60 backdrop-blur-sm transition-all hover:border-primary/30 hover:text-foreground hover:shadow-[0_0_20px_rgba(120,80,255,0.1)]"
+                className="group rounded-full border border-white/[0.06] bg-white/[0.02] p-3 text-muted-foreground/60 backdrop-blur-sm transition-all hover:border-primary/30 hover:text-foreground hover:shadow-[0_0_20px_rgba(200,165,80,0.07)]"
               >
                 <Icon className="h-4 w-4 transition-transform group-hover:scale-110" />
               </a>

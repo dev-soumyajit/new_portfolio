@@ -80,7 +80,7 @@ export function Navbar() {
             className="fixed top-4 left-1/2 z-50 -translate-x-1/2 w-auto max-w-[calc(100vw-2rem)]"
           >
             {/* Desktop pill */}
-            <div className="hidden md:flex items-center gap-1 rounded-full border border-white/[0.08] bg-[oklch(0.09_0.01_260/75%)] px-1.5 py-1.5 shadow-xl shadow-black/20 backdrop-blur-xl">
+            <div className="hidden md:flex items-center gap-1 rounded-full border border-white/[0.08] bg-[oklch(0.14_0.006_60/75%)] px-1.5 py-1.5 shadow-xl shadow-black/20 backdrop-blur-xl">
               <MagneticButton strength={0.1}>
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -115,7 +115,7 @@ export function Navbar() {
               <MagneticButton strength={0.08}>
                 <button
                   onClick={() => scrollTo("#contact")}
-                  className="ml-1 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-5 py-2 text-base font-medium text-white transition-opacity hover:opacity-90"
+                  className="ml-1 rounded-full bg-gradient-to-r from-amber-600/90 to-amber-500/90 px-5 py-2 text-base font-medium text-white transition-opacity hover:opacity-90"
                 >
                   Hire Me
                 </button>
@@ -123,7 +123,7 @@ export function Navbar() {
             </div>
 
             {/* Mobile floating pill */}
-            <div className="flex md:hidden items-center justify-between rounded-full border border-white/[0.08] bg-[oklch(0.09_0.01_260/75%)] px-2 py-1.5 shadow-xl shadow-black/20 backdrop-blur-xl">
+            <div className="flex md:hidden items-center justify-between rounded-full border border-white/[0.08] bg-[oklch(0.14_0.006_60/75%)] px-2 py-1.5 shadow-xl shadow-black/20 backdrop-blur-xl">
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10"
@@ -204,7 +204,7 @@ export function Navbar() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 md:hidden"
           >
-            <div className="absolute inset-0 bg-[oklch(0.07_0.01_260/95%)] backdrop-blur-xl" />
+            <div className="absolute inset-0 bg-[oklch(0.13_0.005_60/95%)] backdrop-blur-xl" />
 
             {/* Close button at top-right */}
             <button
@@ -235,7 +235,7 @@ export function Navbar() {
                 exit={{ opacity: 0, y: 30 }}
                 transition={{ delay: navItems.length * 0.05 }}
                 onClick={() => scrollTo("#contact")}
-                className="mt-4 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-8 py-3 text-base font-medium text-white sm:text-lg"
+                className="mt-4 rounded-full bg-gradient-to-r from-amber-600/90 to-amber-500/90 px-8 py-3 text-base font-medium text-white sm:text-lg"
               >
                 Hire Me
               </motion.button>

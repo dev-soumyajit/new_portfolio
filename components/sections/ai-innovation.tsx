@@ -15,18 +15,18 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 const orbitNodes = [
-  { label: "LangChain", angle: 0, radius: 130, duration: 25, color: "rgba(120,80,255,0.6)" },
-  { label: "RAG", angle: 72, radius: 130, duration: 28, color: "rgba(56,189,248,0.6)" },
-  { label: "OpenAI", angle: 144, radius: 130, duration: 22, color: "rgba(52,211,153,0.6)" },
-  { label: "Vectors", angle: 216, radius: 130, duration: 30, color: "rgba(251,146,60,0.6)" },
-  { label: "Prompts", angle: 288, radius: 130, duration: 26, color: "rgba(236,72,153,0.6)" },
+  { label: "LangChain", angle: 0, radius: 130, duration: 25, color: "rgba(200,165,80,0.5)" },
+  { label: "RAG", angle: 72, radius: 130, duration: 28, color: "rgba(190,155,90,0.5)" },
+  { label: "OpenAI", angle: 144, radius: 130, duration: 22, color: "rgba(180,130,100,0.5)" },
+  { label: "Vectors", angle: 216, radius: 130, duration: 30, color: "rgba(200,175,70,0.5)" },
+  { label: "Prompts", angle: 288, radius: 130, duration: 26, color: "rgba(210,155,85,0.5)" },
 ];
 
 export function AiInnovation() {
   return (
     <section id="ai" className="relative py-20 px-4 sm:py-32 sm:px-6">
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-600/[0.04] blur-[140px]" />
+        <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-amber-600/[0.04] blur-[140px]" />
       </div>
 
       <div className="relative mx-auto max-w-6xl">
@@ -36,7 +36,7 @@ export function AiInnovation() {
               initial={{ width: 0 }}
               whileInView={{ width: "3rem" }}
               viewport={{ once: true }}
-              className="mx-auto mb-6 block h-px bg-gradient-to-r from-emerald-400/80 to-primary/80"
+              className="mx-auto mb-6 block h-px bg-gradient-to-r from-yellow-500/80 to-primary/80"
             />
             <span className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.25em] text-primary/80">
               <Sparkles className="h-3.5 w-3.5" />
@@ -69,9 +69,9 @@ export function AiInnovation() {
               <motion.div
                 animate={{ scale: [1, 1.08, 1] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-violet-600/20 to-cyan-600/20 backdrop-blur-sm"
+                className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-amber-500/15 to-orange-500/15 backdrop-blur-sm"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-violet-600 to-cyan-500">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-amber-600/90 to-amber-500/90">
                   <Brain className="h-7 w-7 text-white" />
                 </div>
                 {/* Pulse rings */}
@@ -91,7 +91,7 @@ export function AiInnovation() {
                     marginTop: "-1px",
                   } as React.CSSProperties}
                 >
-                  <div className="flex items-center gap-1.5 rounded-full border border-white/[0.1] bg-[oklch(0.1_0.01_260)] px-3 py-1.5 shadow-lg">
+                  <div className="flex items-center gap-1.5 rounded-full border border-white/[0.1] bg-[oklch(0.15_0.006_60)] px-3 py-1.5 shadow-lg">
                     <div
                       className="h-2 w-2 rounded-full"
                       style={{ background: node.color }}
@@ -112,7 +112,7 @@ export function AiInnovation() {
               return (
                 <SectionReveal key={cap.title} delay={i * 0.1} direction="right">
                   <SpotlightCard className="group h-full p-6">
-                    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04] transition-all group-hover:border-primary/30 group-hover:shadow-[0_0_15px_rgba(120,80,255,0.1)]">
+                    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04] transition-all group-hover:border-primary/30 group-hover:shadow-[0_0_15px_rgba(200,165,80,0.07)]">
                       <Icon className="h-5 w-5 text-primary/80" />
                     </div>
                     <h3 className="font-semibold">{cap.title}</h3>
@@ -129,7 +129,7 @@ export function AiInnovation() {
         {/* CTA banner */}
         <SectionReveal delay={0.3}>
           <div className="relative mt-10 overflow-hidden rounded-2xl border border-white/[0.06] sm:mt-16 sm:rounded-3xl">
-            <div className="absolute inset-0 bg-gradient-to-r from-violet-600/[0.08] via-cyan-600/[0.05] to-emerald-600/[0.08]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-amber-600/[0.08] via-orange-600/[0.05] to-red-600/[0.08]" />
             <div className="dot-bg absolute inset-0 opacity-50" />
             <div className="relative flex flex-col items-center gap-5 p-6 text-center sm:gap-6 sm:p-10 md:flex-row md:p-12 md:text-left">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 animate-pulse-glow">

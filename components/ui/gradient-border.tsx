@@ -24,12 +24,12 @@ export function GradientBorder({
         )}
         style={{
           background:
-            "conic-gradient(from var(--gradient-angle, 0deg), transparent 40%, rgba(120,80,255,0.5) 50%, rgba(56,189,248,0.5) 55%, transparent 60%)",
+            "conic-gradient(from var(--gradient-angle, 0deg), transparent 40%, rgba(200,165,80,0.35) 50%, rgba(190,155,90,0.35) 55%, transparent 60%)",
         }}
       />
       <div
         className={cn(
-          "relative rounded-2xl bg-[oklch(0.08_0.01_260)]",
+          "relative rounded-2xl bg-[oklch(0.14_0.006_60)]",
           className
         )}
       >

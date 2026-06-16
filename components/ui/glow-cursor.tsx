@@ -44,7 +44,7 @@ export function GlowCursor() {
         width: 500,
         height: 500,
         background:
-          "radial-gradient(circle, oklch(0.7 0.2 270 / 6%) 0%, transparent 70%)",
+          "radial-gradient(circle, oklch(0.74 0.11 60 / 4%) 0%, transparent 70%)",
       }}
       aria-hidden="true"
     />

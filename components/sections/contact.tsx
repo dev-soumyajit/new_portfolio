@@ -48,8 +48,8 @@ export function Contact() {
   return (
     <section id="contact" className="relative py-20 px-4 sm:py-32 sm:px-6">
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div className="absolute left-1/4 bottom-0 h-[500px] w-[500px] rounded-full bg-violet-600/[0.04] blur-[120px]" />
-        <div className="absolute right-1/4 top-1/4 h-[300px] w-[300px] rounded-full bg-cyan-600/[0.03] blur-[100px]" />
+        <div className="absolute left-1/4 bottom-0 h-[500px] w-[500px] rounded-full bg-amber-600/[0.04] blur-[120px]" />
+        <div className="absolute right-1/4 top-1/4 h-[300px] w-[300px] rounded-full bg-orange-600/[0.03] blur-[100px]" />
       </div>
 
       <div className="relative mx-auto max-w-6xl">
@@ -59,7 +59,7 @@ export function Contact() {
               initial={{ width: 0 }}
               whileInView={{ width: "3rem" }}
               viewport={{ once: true }}
-              className="mx-auto mb-6 block h-px bg-gradient-to-r from-primary/80 to-emerald-400/80"
+              className="mx-auto mb-6 block h-px bg-gradient-to-r from-primary/80 to-yellow-500/80"
             />
             <span className="text-sm font-medium uppercase tracking-[0.25em] text-primary/80">
               Contact
@@ -81,12 +81,12 @@ export function Contact() {
           <SectionReveal direction="left" className="lg:col-span-2">
             <div className="space-y-8">
               <div>
-                <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-emerald-500/20 bg-emerald-500/[0.06] px-4 py-2 text-sm">
+                <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-amber-500/20 bg-amber-500/[0.06] px-4 py-2 text-sm">
                   <span className="relative flex h-2 w-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-500" />
                   </span>
-                  <span className="text-emerald-400">Available for work</span>
+                  <span className="text-amber-400">Available for work</span>
                 </div>
                 <h3 className="text-2xl font-bold">Get in Touch</h3>
                 <p className="mt-3 text-muted-foreground leading-relaxed">
@@ -141,7 +141,7 @@ export function Contact() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={label}
-                        className="group flex h-11 w-11 items-center justify-center rounded-xl border border-white/[0.06] bg-white/[0.02] text-muted-foreground/60 transition-all hover:border-primary/30 hover:text-foreground hover:shadow-[0_0_15px_rgba(120,80,255,0.08)]"
+                        className="group flex h-11 w-11 items-center justify-center rounded-xl border border-white/[0.06] bg-white/[0.02] text-muted-foreground/60 transition-all hover:border-primary/30 hover:text-foreground hover:shadow-[0_0_15px_rgba(200,165,80,0.08)]"
                       >
                         <Icon className="h-4 w-4 transition-transform group-hover:scale-110" />
                       </a>
@@ -179,7 +179,7 @@ export function Contact() {
                         }
                         onFocus={() => setFocused(field.id)}
                         onBlur={() => setFocused(null)}
-                        className="w-full rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3 text-sm text-foreground outline-none transition-all placeholder:text-muted-foreground/30 focus:border-primary/40 focus:shadow-[0_0_20px_rgba(120,80,255,0.06)]"
+                        className="w-full rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3 text-sm text-foreground outline-none transition-all placeholder:text-muted-foreground/30 focus:border-primary/40 focus:shadow-[0_0_20px_rgba(200,165,80,0.06)]"
                         placeholder={field.placeholder}
                       />
                     </div>
@@ -205,7 +205,7 @@ export function Contact() {
                     }
                     onFocus={() => setFocused("message")}
                     onBlur={() => setFocused(null)}
-                    className="w-full resize-none rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3 text-sm text-foreground outline-none transition-all placeholder:text-muted-foreground/30 focus:border-primary/40 focus:shadow-[0_0_20px_rgba(120,80,255,0.06)]"
+                    className="w-full resize-none rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3 text-sm text-foreground outline-none transition-all placeholder:text-muted-foreground/30 focus:border-primary/40 focus:shadow-[0_0_20px_rgba(200,165,80,0.06)]"
                     placeholder="Tell me about your project or idea..."
                   />
                 </div>
@@ -222,8 +222,8 @@ export function Contact() {
                     disabled={isSending}
                     className="group relative w-full overflow-hidden rounded-xl py-3.5 text-sm font-medium transition-all disabled:cursor-not-allowed disabled:opacity-70"
                   >
-                    <span className="absolute inset-0 bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600" />
-                    <span className="absolute inset-0 bg-gradient-to-r from-violet-600 via-cyan-500 to-purple-600 opacity-0 transition-opacity group-hover:opacity-100" />
+                    <span className="absolute inset-0 bg-gradient-to-r from-amber-600/90 via-amber-500/90 to-orange-500/80" />
+                    <span className="absolute inset-0 bg-gradient-to-r from-amber-500/90 via-yellow-500/80 to-amber-500/90 opacity-0 transition-opacity group-hover:opacity-100" />
                     <span className="relative flex items-center justify-center gap-2 text-white">
                       {isSending ? (
                         <>

@@ -37,8 +37,8 @@ export function Skills() {
   return (
     <section id="skills" className="relative py-20 px-4 sm:py-32 sm:px-6">
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div className="absolute left-0 top-1/3 h-[500px] w-[500px] rounded-full bg-cyan-600/[0.03] blur-[120px]" />
-        <div className="absolute right-1/4 bottom-0 h-[300px] w-[300px] rounded-full bg-violet-600/[0.03] blur-[100px]" />
+        <div className="absolute left-0 top-1/3 h-[500px] w-[500px] rounded-full bg-amber-600/[0.03] blur-[120px]" />
+        <div className="absolute right-1/4 bottom-0 h-[300px] w-[300px] rounded-full bg-orange-600/[0.03] blur-[100px]" />
       </div>
 
       <div className="relative mx-auto max-w-6xl">
@@ -48,7 +48,7 @@ export function Skills() {
               initial={{ width: 0 }}
               whileInView={{ width: "3rem" }}
               viewport={{ once: true }}
-              className="mx-auto mb-6 block h-px bg-gradient-to-r from-cyan-400/80 to-primary/80"
+              className="mx-auto mb-6 block h-px bg-gradient-to-r from-yellow-500/80 to-primary/80"
             />
             <span className="text-sm font-medium uppercase tracking-[0.25em] text-primary/80">
               Tech Stack
