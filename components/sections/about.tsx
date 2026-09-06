@@ -7,6 +7,7 @@ import { SectionReveal } from "@/components/ui/section-reveal";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { BeamDivider } from "@/components/ui/beam-divider";
+import { TiltCard } from "@/components/ui/tilt-card";
 
 const highlights = [
   {
@@ -123,28 +124,30 @@ export function About() {
             );
           })}
 
-          {/* Highlight cards — bottom row, each spans ~1.5 cols */}
+          {/* Highlight cards — bottom row with 3D tilt */}
           {highlights.map((h, i) => (
             <SectionReveal
               key={h.title}
               delay={0.2 + i * 0.08}
               className="sm:col-span-1 md:col-span-3"
             >
-              <SpotlightCard className="group h-full p-6">
-                <div className="flex items-start gap-4">
-                  <div
-                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${h.gradient} transition-transform group-hover:scale-110`}
-                  >
-                    <h.icon className="h-5 w-5 text-foreground/80" />
+              <TiltCard>
+                <SpotlightCard className="group h-full p-6">
+                  <div className="flex items-start gap-4">
+                    <div
+                      className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${h.gradient} transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/10`}
+                    >
+                      <h.icon className="h-5 w-5 text-foreground/80" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">{h.title}</h3>
+                      <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+                        {h.description}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold">{h.title}</h3>
-                    <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
-                      {h.description}
-                    </p>
-                  </div>
-                </div>
-              </SpotlightCard>
+                </SpotlightCard>
+              </TiltCard>
             </SectionReveal>
           ))}
         </div>

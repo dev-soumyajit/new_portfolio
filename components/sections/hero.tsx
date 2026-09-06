@@ -73,6 +73,40 @@ export function Hero() {
         aria-hidden="true"
       />
 
+      {/* 3D Floating Terminal — decorative behind content */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.85, rotateX: 20, rotateY: -15 }}
+          animate={{ opacity: 1, scale: 1, rotateX: 8, rotateY: -8 }}
+          transition={{ delay: 1.8, duration: 1.2, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="relative animate-float-3d"
+          style={{ perspective: "1200px", transformStyle: "preserve-3d" }}
+        >
+          <div className="relative w-[280px] sm:w-[420px] md:w-[520px] rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-md shadow-2xl shadow-black/30 overflow-hidden"
+            style={{ transformStyle: "preserve-3d", transform: "translateZ(-80px)" }}
+          >
+            {/* Terminal header */}
+            <div className="flex items-center gap-2 border-b border-white/[0.06] px-4 py-3">
+              <div className="flex gap-1.5">
+                <div className="h-2.5 w-2.5 rounded-full bg-red-500/60" />
+                <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/60" />
+                <div className="h-2.5 w-2.5 rounded-full bg-green-500/60" />
+              </div>
+              <span className="ml-2 text-[10px] font-mono text-muted-foreground/40">portfolio.tsx</span>
+            </div>
+            {/* Terminal body */}
+            <div className="p-4 font-mono text-[10px] sm:text-xs leading-relaxed space-y-1">
+              <div><span className="text-primary/50">const</span> <span className="text-amber-400/60">developer</span> <span className="text-primary/40">=</span> <span className="text-muted-foreground/30">&#123;</span></div>
+              <div className="pl-4"><span className="text-emerald-400/50">name</span><span className="text-muted-foreground/30">:</span> <span className="text-amber-300/50">&quot;Soumyajit Khan&quot;</span><span className="text-muted-foreground/30">,</span></div>
+              <div className="pl-4"><span className="text-emerald-400/50">stack</span><span className="text-muted-foreground/30">:</span> <span className="text-amber-300/50">&quot;Full Stack + AI&quot;</span><span className="text-muted-foreground/30">,</span></div>
+              <div className="pl-4"><span className="text-emerald-400/50">passion</span><span className="text-muted-foreground/30">:</span> <span className="text-amber-300/50">&quot;Building Products&quot;</span><span className="text-muted-foreground/30">,</span></div>
+              <div className="pl-4"><span className="text-emerald-400/50">status</span><span className="text-muted-foreground/30">:</span> <span className="text-green-400/50">&quot;Available&quot;</span></div>
+              <div><span className="text-muted-foreground/30">&#125;;</span></div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
       <div className="relative z-10 mx-auto max-w-5xl">
         {/* Name — character reveal */}
         <div className="text-center">

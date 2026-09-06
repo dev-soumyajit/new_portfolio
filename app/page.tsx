@@ -10,6 +10,7 @@ import { About } from "@/components/sections/about";
 import { Skills } from "@/components/sections/skills";
 import { Experience } from "@/components/sections/experience";
 import { Projects } from "@/components/sections/projects";
+import { Freelance } from "@/components/sections/freelance";
 import { AiInnovation } from "@/components/sections/ai-innovation";
 import { Contact } from "@/components/sections/contact";
 
@@ -26,6 +27,7 @@ export default function Page() {
         <Skills />
         <Experience />
         <Projects />
+        <Freelance />
         <AiInnovation />
         <Contact />
       </main>

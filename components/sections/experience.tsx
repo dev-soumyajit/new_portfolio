@@ -53,7 +53,7 @@ export function Experience() {
           {experiences.map((exp, index) => (
             <SectionReveal key={exp.company} delay={index * 0.15}>
               <div className="relative mb-12 pl-14 sm:pl-20 md:pl-28">
-                {/* Timeline node */}
+                {/* Timeline node — 3D */}
                 <div className="absolute left-[12px] top-0 z-10 sm:left-[26px] md:left-[42px]">
                   <motion.div
                     initial={{ scale: 0, rotate: -180 }}
@@ -61,9 +61,11 @@ export function Experience() {
                     viewport={{ once: true }}
                     transition={{ type: "spring", stiffness: 200, damping: 15, delay: 0.3 }}
                     className="relative flex h-7 w-7 items-center justify-center"
+                    style={{ transformStyle: "preserve-3d" }}
                   >
                     <div className="absolute inset-0 rounded-full bg-primary/20 animate-pulse-glow" />
-                    <div className="flex h-7 w-7 items-center justify-center rounded-full border-2 border-primary bg-background">
+                    <div className="absolute -inset-1 rounded-full bg-primary/5 blur-md" />
+                    <div className="flex h-7 w-7 items-center justify-center rounded-full border-2 border-primary bg-background shadow-[0_0_15px_rgba(200,165,80,0.15)]">
                       <Zap className="h-3 w-3 text-primary" />
                     </div>
                   </motion.div>

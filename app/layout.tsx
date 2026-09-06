@@ -94,6 +94,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <TooltipProvider>{children}</TooltipProvider>
+        <div className="noise-overlay" aria-hidden="true" />
       </body>
     </html>
   );

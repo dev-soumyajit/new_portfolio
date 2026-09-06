@@ -5,7 +5,8 @@
       "Bash(npx next build:*)",
       "Bash(xxd:*)",
       "Bash(npm install:*)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "WebFetch(domain:numberdepotinc.com)"
     ]
   }
 }

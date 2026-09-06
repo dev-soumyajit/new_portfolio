@@ -65,17 +65,23 @@ export function AiInnovation() {
                 />
               ))}
 
-              {/* Center brain */}
+              {/* Center brain — 3D sphere glow */}
               <motion.div
                 animate={{ scale: [1, 1.08, 1] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-amber-500/15 to-orange-500/15 backdrop-blur-sm"
+                className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full"
+                style={{ transformStyle: "preserve-3d" }}
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-amber-600/90 to-amber-500/90">
+                {/* Outer glow ring */}
+                <div className="absolute -inset-3 rounded-full bg-primary/5 blur-xl" />
+                {/* Glass shell */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-amber-500/15 to-orange-500/15 backdrop-blur-sm shadow-[inset_0_-4px_12px_rgba(200,165,80,0.1),0_0_30px_rgba(200,165,80,0.08)]" />
+                <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-amber-600/90 to-amber-500/90 shadow-lg shadow-amber-600/20">
                   <Brain className="h-7 w-7 text-white" />
                 </div>
                 {/* Pulse rings */}
                 <div className="absolute inset-0 animate-ping rounded-full bg-primary/10" style={{ animationDuration: "3s" }} />
+                <div className="absolute -inset-2 animate-ping rounded-full bg-primary/5" style={{ animationDuration: "4s", animationDelay: "1s" }} />
               </motion.div>
 
               {/* Orbiting nodes */}

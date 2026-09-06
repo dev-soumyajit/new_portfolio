@@ -10,7 +10,7 @@ interface TiltCardProps {
   glareColor?: string;
 }
 
-export function TiltCard({ children, className, glareColor = "rgba(120, 80, 255, 0.12)" }: TiltCardProps) {
+export function TiltCard({ children, className, glareColor = "rgba(200, 165, 80, 0.10)" }: TiltCardProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [glare, setGlare] = useState({ x: 50, y: 50, opacity: 0 });
 
@@ -51,6 +51,16 @@ export function TiltCard({ children, className, glareColor = "rgba(120, 80, 255,
         style={{
           opacity: glare.opacity,
           background: `radial-gradient(circle at ${glare.x}% ${glare.y}%, ${glareColor}, transparent 50%)`,
+        }}
+      />
+      {/* 3D shadow layer that moves opposite to tilt */}
+      <motion.div
+        className="pointer-events-none absolute inset-2 -z-10 rounded-2xl bg-primary/[0.03] blur-xl"
+        style={{
+          rotateX,
+          rotateY,
+          translateZ: -30,
+          transformStyle: "preserve-3d",
         }}
       />
       {children}

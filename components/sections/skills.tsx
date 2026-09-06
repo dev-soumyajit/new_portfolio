@@ -78,39 +78,42 @@ export function Skills() {
 
         <BeamDivider />
 
-        {/* Category Cards */}
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Category Cards — 3D */}
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 perspective-1500">
           {skillCategories.map((category, i) => (
             <SectionReveal key={category.title} delay={0.1 + i * 0.08}>
-              <SpotlightCard className="group h-full p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div
-                    className={`flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br ${category.color} transition-all duration-300 group-hover:shadow-lg group-hover:scale-105`}
-                  >
-                    <category.icon className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">{category.title}</h3>
-                    <p className="text-xs text-muted-foreground/60">{category.skills.length} technologies</p>
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  {category.skills.map((skill, si) => (
-                    <motion.div
-                      key={skill.name}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.3 + si * 0.05 }}
-                      className="flex items-center gap-2.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              <div className="preserve-3d transition-transform duration-500 hover:[transform:rotateX(2deg)_rotateY(-2deg)_translateZ(10px)]">
+                <SpotlightCard className="group h-full p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div
+                      className={`flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br ${category.color} transition-all duration-500 group-hover:shadow-lg group-hover:shadow-primary/10 group-hover:scale-110`}
+                      style={{ transformStyle: "preserve-3d", transform: "translateZ(20px)" }}
                     >
-                      <div className={`h-1.5 w-1.5 rounded-full bg-gradient-to-r ${category.color}`} />
-                      {skill.name}
-                    </motion.div>
-                  ))}
-                </div>
-              </SpotlightCard>
+                      <category.icon className="h-5 w-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">{category.title}</h3>
+                      <p className="text-xs text-muted-foreground/60">{category.skills.length} technologies</p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    {category.skills.map((skill, si) => (
+                      <motion.div
+                        key={skill.name}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 + si * 0.05 }}
+                        className="flex items-center gap-2.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                      >
+                        <div className={`h-1.5 w-1.5 rounded-full bg-gradient-to-r ${category.color}`} />
+                        {skill.name}
+                      </motion.div>
+                    ))}
+                  </div>
+                </SpotlightCard>
+              </div>
             </SectionReveal>
           ))}
         </div>

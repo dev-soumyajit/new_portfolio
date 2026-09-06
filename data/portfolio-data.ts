@@ -96,7 +96,10 @@ export const skillCategories: SkillCategory[] = [
       { name: "Docker", icon: Box },
       { name: "AWS", icon: Cloud },
       { name: "GitHub Actions", icon: GitBranch },
+      { name: "Jenkins", icon: Zap },
       { name: "CI/CD", icon: Zap },
+      { name: "Nginx", icon: Server },
+      { name: "Linux", icon: Server },
     ],
   },
   {
@@ -175,6 +178,40 @@ export const projects: Project[] = [
     ],
     tech: ["Node.js", "MongoDB", "AI APIs", "Docker"],
     gradient: "from-orange-500/85 to-amber-600/85",
+    icon: "phone",
+  },
+];
+
+export interface FreelanceProject {
+  id: string;
+  title: string;
+  client: string;
+  description: string;
+  features: string[];
+  tech: string[];
+  liveUrl: string;
+  gradient: string;
+  icon: string;
+}
+
+export const freelanceProjects: FreelanceProject[] = [
+  {
+    id: "numberdepot",
+    title: "NumberDepot Inc.",
+    client: "NumberDepot Inc.",
+    description:
+      "Full-stack phone number marketplace platform enabling users to browse, buy, and manage vanity, local, and toll-free numbers. Features Stripe payment integration, real-time number search with area code filtering, and a scalable inventory system serving 50,000+ numbers.",
+    features: [
+      "Number search & filtering",
+      "Stripe payment integration",
+      "Instant number activation",
+      "Plan management system",
+      "Admin dashboard",
+      "Responsive UI",
+    ],
+    tech: ["React", "Material UI", "Node.js", "Stripe", "REST APIs"],
+    liveUrl: "https://numberdepotinc.com",
+    gradient: "from-emerald-500/85 to-teal-600/85",
     icon: "phone",
   },
 ];
@@ -263,6 +300,7 @@ export const navItems = [
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Freelance", href: "#freelance" },
   { label: "AI", href: "#ai" },
   { label: "Contact", href: "#contact" },
 ];
