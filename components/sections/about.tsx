@@ -70,7 +70,7 @@ export function About() {
         <BeamDivider />
 
         {/* Bento Grid */}
-        <div className="mt-8 grid gap-4 sm:mt-12 sm:grid-cols-2 md:grid-cols-6 md:grid-rows-3">
+        <div className="mt-8 grid gap-4 sm:mt-12 sm:grid-cols-2 md:grid-cols-6">
           {/* Main bio — large card spanning 4 cols, 2 rows */}
           <SectionReveal className="sm:col-span-2 md:col-span-4 md:row-span-2">
             <SpotlightCard className="h-full p-6 sm:p-8 md:p-10">
@@ -100,29 +100,48 @@ export function About() {
             </SpotlightCard>
           </SectionReveal>
 
-          {/* Stats — 2 cols, 2 rows, each stat in its own mini card */}
-          {stats.map(({ label, value }, i) => {
-            const { number, suffix } = parseStatValue(value);
-            return (
-              <SectionReveal key={label} delay={0.1 + i * 0.08} className="sm:col-span-1 md:col-span-1">
-                <SpotlightCard
-                  className="flex h-full flex-col items-center justify-center p-6 text-center"
-                  spotlightColor={
-                    i % 2 === 0
-                      ? "rgba(200,165,80,0.07)"
-                      : "rgba(190,155,90,0.07)"
-                  }
-                >
-                  <p className="text-3xl font-bold gradient-text md:text-4xl">
-                    <AnimatedCounter target={number} suffix={suffix} />
-                  </p>
-                  <p className="mt-1.5 text-xs font-medium uppercase tracking-wider text-muted-foreground/70">
-                    {label}
-                  </p>
-                </SpotlightCard>
-              </SectionReveal>
-            );
-          })}
+          {/* 3D Code Terminal Card */}
+          <SectionReveal delay={0.15} className="sm:col-span-2 md:col-span-2 md:row-span-2">
+            <TiltCard>
+              <SpotlightCard className="h-full overflow-hidden">
+                <div className="flex items-center gap-2 border-b border-white/[0.06] px-4 py-3">
+                  <div className="flex gap-1.5">
+                    <div className="h-2.5 w-2.5 rounded-full bg-red-500/60" />
+                    <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/60" />
+                    <div className="h-2.5 w-2.5 rounded-full bg-green-500/60" />
+                  </div>
+                  <span className="ml-2 text-[10px] font-mono text-muted-foreground/40">about.ts</span>
+                </div>
+                <div className="p-4 font-mono text-xs leading-relaxed space-y-1.5">
+                  <div><span className="text-primary/60">const</span> <span className="text-amber-400/80">developer</span> <span className="text-primary/50">=</span> <span className="text-muted-foreground/40">&#123;</span></div>
+                  <div className="pl-4"><span className="text-emerald-400/70">name</span><span className="text-muted-foreground/40">:</span> <span className="text-amber-300/70">&quot;Soumyajit Khan&quot;</span><span className="text-muted-foreground/40">,</span></div>
+                  <div className="pl-4"><span className="text-emerald-400/70">role</span><span className="text-muted-foreground/40">:</span> <span className="text-amber-300/70">&quot;Full Stack + AI&quot;</span><span className="text-muted-foreground/40">,</span></div>
+                  <div className="pl-4"><span className="text-emerald-400/70">location</span><span className="text-muted-foreground/40">:</span> <span className="text-amber-300/70">&quot;Kolkata, India&quot;</span><span className="text-muted-foreground/40">,</span></div>
+                  <div className="pl-4"><span className="text-emerald-400/70">passion</span><span className="text-muted-foreground/40">:</span> <span className="text-amber-300/70">&quot;Building Products&quot;</span><span className="text-muted-foreground/40">,</span></div>
+                  <div className="pl-4"><span className="text-emerald-400/70">status</span><span className="text-muted-foreground/40">:</span> <span className="text-green-400/70">&quot;Available&quot;</span></div>
+                  <div><span className="text-muted-foreground/40">&#125;;</span></div>
+                </div>
+                {/* Stats row inside the terminal */}
+                <div className="border-t border-white/[0.06] px-4 py-4">
+                  <div className="grid grid-cols-2 gap-3">
+                    {stats.map(({ label, value }, i) => {
+                      const { number, suffix } = parseStatValue(value);
+                      return (
+                        <div key={label} className="text-center">
+                          <p className="text-lg font-bold gradient-text sm:text-xl">
+                            <AnimatedCounter target={number} suffix={suffix} />
+                          </p>
+                          <p className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground/50">
+                            {label}
+                          </p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </SpotlightCard>
+            </TiltCard>
+          </SectionReveal>
 
           {/* Highlight cards — bottom row with 3D tilt */}
           {highlights.map((h, i) => (
